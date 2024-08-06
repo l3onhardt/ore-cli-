@@ -63,8 +63,8 @@ impl Miner {
                 find_bus(),
                 solution,
             ));
-            if  best_difficulty >= args.min_difficulty as u32  {
-                println!("best_difficulty: {} >= {}", best_difficulty, args.min_difficulty);
+            if  best_difficulty >= 18 as u32  {
+                println!(" {}, difficulty: {}", "best_difficulty >= 18.green(),best_difficulty);
                 self.send_and_confirm(&ixs, ComputeBudget::Fixed(compute_budget), false)
                 .await
                 .ok();
