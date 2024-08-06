@@ -64,7 +64,7 @@ impl Miner {
                 solution,
             ));
             if  best_difficulty >= 18 as u32  {
-                println!(" {}, difficulty: {}", "best_difficulty >= 18.green(),best_difficulty);
+                println!(" {}, difficulty: {}", "best_difficulty >= 18".green(),best_difficulty);
                 self.send_and_confirm(&ixs, ComputeBudget::Fixed(compute_budget), false)
                 .await
                 .ok();
